@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>James Kimeu Mulei</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch">
+                        <span class="slider round"></span>
+                    </label>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="section">
+        <div class="container">
+            <div class="greeting-container">
+                <h2 id="greeting">Hello there!</h2>
+                <div class="clock-container">
+                    <div id="live-clock">00:00:00</div>
+                </div>
+            </div>
+            <div class="hero">
+                <div class="hero-text">
+                    <h1>I'm James Kimeu Mulei</h1>
+                    <h3>3rd Year Apt Student</h3>
+                    <p>Passionate about developing hacking and cyber-security.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary-btn">View My Work</a>
+                        <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/profile.jpg" alt="James Kimeu Mulei" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/about-me.jpg" alt="About JKMulei">
+                </div>
+                <div class="about-text">
+                    <h3>Who am I?</h3>
+                    <p>I am james kimeu mulei, a third-year Information Science and Technology student with a passion for cyber se2curity and ethical hacking. I enjoy working with various technologies and continuously learning new skills.</p>
+                    
+                    <h3>Education</h3>
+                    <p>Currently pursuing a degree in Information Science and Technology, focusing on web development, security, and hardware design.</p>
+                    
+                    <h3>My Skills</h3>
+                    <div class="skills">
+                        <div class="skill">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill-1" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill-2" data-width="70"></div>
+                        </div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name"> IOT </span>
+                            <div class="progress-bar">
+                                <div class="progress-fill-3" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Data Analysis</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill-4" data-width="65"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="data">Data Analysis</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="images/project1.png" alt="E-commerce Website">
+                    </div>
+                    <div class="project-details">
+                        <h3> Library management system </h3>
+                        <p>Allows for addition of books as well as borrowing .</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://brianki254.github.io/Library_system/">
+                        <button class="btn project-btn" data-project="project1">View Details</button>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-category="data">
+                    <div class="project-image">
+                        <img src="images/project2.png" alt="Data Visualization Dashboard">
+                    </div>
+                    <div class="project-details">
+                        <h3>Premier league table</h3>
+                        <p> a recreation of a snapshot of the primear league table.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                        <a href="https://brianki254.github.io/Premier_league_table/">
+                        <button class="btn project-btn" data-project="project2">View Details</button>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="images/project3.png" alt="Mobile App">
+                    </div>
+                    <div class="project-details">
+                        <h3>Student Planner App</h3>
+                        <p> Wor in progress .</p>
+                        <div class="project-tags">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <button class="btn project-btn" data-project="project3">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="images/project4.png" alt="Portfolio Website">
+                    </div>
+                    <div class="project-details">
+                        <h3>Portfolio Template</h3>
+                        <p>work in progress.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <button class="btn project-btn" data-project="project4">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project Modal
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modal-content">
+                     Modal content will be inserted here via JavaScript 
+                </div>
+            </div>
+        </div> -->
+    </section>
+
+    <section id="blog" class="section">
+        <div class="container">
+            <h2 class="section-title">Blog</h2>
+            <div class="blog-controls">
+                <div class="blog-search">
+                    <input type="text" id="blog-search-input" placeholder="Search blog posts...">
+                </div>
+                <div class="blog-filter">
+                    <select id="blog-category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="tech">Technology</option>
+                        <option value="education">Education</option>
+                        <option value="career">Career</option>
+                    </select>
+                </div>
+            </div>
+            <div class="blog-container" id="blog-posts">
+                <!-- Blog posts will be loaded dynamically via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>Feel free to reach out if you have any questions or just want to say hi!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>kimeujames237@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <span class="error-message" id="subject-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>James Kimeu Mulei</h2>
+                    <p>Information Science & Technology</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> James Kimeu Mulei. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
