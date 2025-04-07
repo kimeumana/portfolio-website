@@ -1,0 +1,30 @@
+[
+    {
+      "title": "Why I Chose Information Science and Technology",
+      "date": "2025-03-15",
+      "summary": "Exploring my journey into the world of Information Science and what excites me most about the future of technology.",
+      "content": "When I first started learning about Information Science, I was fascinated by how data, systems, and people all come together. This post is about the key experiences that shaped my interest...",
+      "tags": ["Career", "Student Life", "Tech Journey"]
+    },
+    {
+      "title": "Top 5 Tools Every Tech Student Should Know",
+      "date": "2025-03-22",
+      "summary": "A list of essential tools I use daily as a tech student—from Git to VS Code.",
+      "content": "As a third-year student, I’ve learned that productivity often comes down to the tools you use. In this post, I break down my top 5 favorite tools and how I use them in school and personal projects.",
+      "tags": ["Tools", "Productivity", "Student Tips"]
+    },
+    {
+      "title": "Building My First Portfolio Website",
+      "date": "2025-03-29",
+      "summary": "Lessons I learned from designing and coding my own portfolio site with HTML, CSS, and JavaScript.",
+      "content": "This was both a fun and challenging project! I had to figure out everything from layout and design to JavaScript interactivity. I share how I planned the site, some mistakes I made, and what I'd do differently next time.",
+      "tags": ["Web Development", "Projects", "Learning"]
+    },
+    {
+      "title": "How I Stay Focused During Finals",
+      "date": "2025-04-01",
+      "summary": "Balancing project deadlines and exam prep is tough—here’s my personal focus system that works.",
+      "content": "Finals season always feels chaotic. Over time, I developed a routine that keeps me productive without burning out. I use time blocking, the Pomodoro technique, and music playlists to stay in the zone.",
+      "tags": ["Study Tips", "Motivation", "Productivity"]
+    }
+  ]
