@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         greeting = 'Good Evening';
     }
-    greetingEl.textContent = `${greeting}, James Kimeu Mulei`;
+    greetingEl.textContent = `${greeting}, I'm Irungu Brian Kariuki`;
 
     //time
     const clockEl = document.querySelector('.clock-container');
@@ -22,8 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateClock, 1000);
     updateClock();
 
-   document.addEventListener('DOMContentLoaded', () => {
-    // Theme switch
+    //theme switch
     const themeSwitch = document.getElementById('theme-switch');
     const root = document.documentElement;
 
@@ -38,9 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const theme = root.classList.contains('dark-theme') ? 'dark' : 'light';
         localStorage.setItem('theme', theme);
     });
-
-    
-});
 
     //validation
     const form = document.querySelector('form'); // Assuming you have one form
@@ -95,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //blog management
     // blog.json will be fetched and rendered
-// blog.json will be fetched and rendered
 let blogPosts = [];
 
 const blogContainer = document.getElementById('blog-posts');
@@ -151,7 +146,7 @@ function filterAndRenderBlogs() {
 
 // Fetch the blog JSON
 if (blogContainer) {
-    fetch('blog.json')
+    fetch('data/blog.json')
         .then(res => res.json())
         .then(data => {
             blogPosts = data;
