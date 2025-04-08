@@ -38,7 +38,7 @@ html {
 /* Basic styling for layout */
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    line-height: 0.6;
     color: var(--text-color);
     background-color: var(--background-color);
     transition: background-color 0.3s ease, color 0.3s ease;
