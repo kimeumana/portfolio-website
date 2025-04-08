@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Greeting
+    //greeting
     const greetingEl = document.getElementById('greeting');
     const hour = new Date().getHours();
     let greeting = 'Hello';
@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         greeting = 'Good Evening';
     }
-    greetingEl.textContent = `${greeting}, I'm James Kimeu Mulei`; // Updated name
+    greetingEl.textContent = `${greeting}, I'm Irungu Brian Kariuki`;
 
-    // Time
+    //time
     const clockEl = document.querySelector('.clock-container');
     function updateClock() {
         const now = new Date();
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateClock, 1000);
     updateClock();
 
-    // Theme switch
+    //theme switch
     const themeSwitch = document.getElementById('theme-switch');
     const root = document.documentElement;
 
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', theme);
     });
 
-    // Validation
+    //validation
     const form = document.querySelector('form'); // Assuming you have one form
     if (form) {
         form.addEventListener('submit', e => {
@@ -69,9 +69,148 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Project filter
+    //project filter
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projects = document.querySelectorAll('.project-card');
 
     filterButtons.forEach(btn => {
-        ⬤
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const category = btn.dataset.category;
+            projects.forEach(project => {
+                if (category === 'all' || project.classList.contains(category)) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    //blog management
+    // blog.json will be fetched and rendered
+let blogPosts = [];
+
+const blogContainer = document.getElementById('blog-posts');
+const blogSearchInput = document.getElementById('blog-search-input');
+const blogCategoryFilter = document.getElementById('blog-category-filter');
+
+// Function to render blog cards
+function renderBlogs(posts) {
+    blogContainer.innerHTML = '';
+    posts.forEach(post => {
+        const card = document.createElement('div');
+        card.className = 'blog-card';
+        card.innerHTML = `
+            <div class="blog-content">
+                <div class="blog-date">${post.date}</div>
+                <h3>${post.title}</h3>
+                <p>${post.content}</p>
+                <div class="blog-category">${post.category}</div>
+            </div>
+        `;
+        blogContainer.appendChild(card);
+    });
+}
+
+// Function to set up filtering and searching
+function setupBlogFilters() {
+    blogSearchInput?.addEventListener('input', () => {
+        filterAndRenderBlogs();
+    });
+
+    blogCategoryFilter?.addEventListener('change', () => {
+        filterAndRenderBlogs();
+    });
+}
+
+// Filtering logic
+function filterAndRenderBlogs() {
+    const searchQuery = blogSearchInput.value.toLowerCase();
+    const selectedCategory = blogCategoryFilter.value;
+
+    const filtered = blogPosts.filter(post => {
+        const matchesSearch =
+            post.title.toLowerCase().includes(searchQuery) ||
+            post.content.toLowerCase().includes(searchQuery);
+        const matchesCategory =
+            selectedCategory === 'all' || post.category === selectedCategory;
+
+        return matchesSearch && matchesCategory;
+    });
+
+    renderBlogs(filtered);
+}
+
+// Fetch the blog JSON
+if (blogContainer) {
+    fetch('data/blog.json')
+        .then(res => res.json())
+        .then(data => {
+            blogPosts = data;
+            renderBlogs(blogPosts);
+            setupBlogFilters();
+        })
+        .catch(err => console.error('Error loading blog posts:', err));
+}
+
+    //project modal group
+    const modal = document.querySelector('.modal');
+    const closeModal = document.querySelector('.close-modal');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    projectCards.forEach(card => {
+        card.addEventListener('click', () => {
+            modal.style.display = 'block';
+            const modalImg = modal.querySelector('img');
+            const img = card.querySelector('img');
+            if (modalImg && img) modalImg.src = img.src;
+        });
+    });
+
+    closeModal?.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+    });
+
+    //scroll spy
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            if (pageYOffset >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+    //progress bars
+    const skillFills = document.querySelectorAll('.progress-fill');
+
+    function animateSkills() {
+        const triggerBottom = window.innerHeight;
+        skillFills.forEach(fill => {
+            const skillTop = fill.getBoundingClientRect().top;
+            const percentage = fill.dataset.percent;
+            if (skillTop < triggerBottom) {
+                fill.style.width = percentage + '%';
+            }
+        });
+    }
+
+    window.addEventListener('scroll', animateSkills);
+});
