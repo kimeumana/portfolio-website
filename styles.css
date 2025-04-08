@@ -160,33 +160,33 @@ img {
     padding: 15px 20px;
 }
 
-/* ============ VERTICAL NAVIGATION STYLES ============ */
+/* ============ HORIZONTAL NAVIGATION STYLES ============ */
 .nav-links {
-    display: flex;
-    flex-direction: column;  /* Stack items vertically */
-    gap: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row;  /* Change to row for horizontal layout */
+    gap: 20px; /* Space between items */
     list-style: none;
     padding-left: 0;
     margin: 0;
 }
 
 .nav-links li {
-    display: block; /* Ensure block-level for vertical layout */
+    display: inline-block; /* Ensure items are inline for horizontal layout */
 }
 
 .nav-links a {
-    display: block;
+    display: block; /* Keep block display for clickable area */
     color: var(--text-color);
     font-weight: 500;
-    padding: 10px 15px;
-    border-left: 3px solid transparent;
+    padding: 10px 15px; /* Adjust padding as needed */
+    border-bottom: 3px solid transparent; /* Change to bottom border for horizontal */
     transition: all 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--primary-color);
-    border-left: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color); /* Change to bottom border on hover */
     background-color: var(--card-bg);
 }
 /* ===================================================== */
