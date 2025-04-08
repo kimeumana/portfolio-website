@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //blog management
     // blog.json will be fetched and rendered
+// blog.json will be fetched and rendered
 let blogPosts = [];
 
 const blogContainer = document.getElementById('blog-posts');
