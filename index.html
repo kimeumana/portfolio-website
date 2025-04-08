@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Center "Let's Connect" */
+        #contact .contact-info {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        /* Make footer quick links horizontal */
+        .footer-links ul {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding-left: 0;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            display: inline-block;
+        }
+
+        .footer-links ul a {
+            color: red;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links ul a:hover {
+            color: var(--primary-color);
+        }
+    </style>
 </head>
 <body>
     <header id="header">
@@ -88,7 +119,7 @@
                             <span class="skill-name">JavaScript</span>
                             <div class="progress-bar">
                                 <div class="progress-fill-2" data-width="70"></div>
-                        </div>
+                            </div>
                         </div>
                         <div class="skill">
                             <span class="skill-name"> IOT </span>
@@ -118,7 +149,6 @@
                 <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
             </div>
             <div class="projects-grid">
-                <!-- Project 1 -->
                 <div class="project-card" data-category="web">
                     <div class="project-image">
                         <img src="project1.png" alt="E-commerce Website">
@@ -136,8 +166,6 @@
                         </a>
                     </div>
                 </div>
-                
-                <!-- Project 2 -->
                 <div class="project-card" data-category="data">
                     <div class="project-image">
                         <img src="project2.png" alt="Data Visualization Dashboard">
@@ -154,20 +182,8 @@
                         </a>
                     </div>
                 </div>
-                
-              
-                
-             
-        
-        <!-- Project Modal
-        <div id="project-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <div id="modal-content">
-                     Modal content will be inserted here via JavaScript 
-                </div>
             </div>
-        </div> -->
+        </div>
     </section>
 
     <section id="blog" class="section">
@@ -243,7 +259,7 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <h2>James Kimeu Mulei</h2>
-                    <p>Information Science & Technology</p>
+                    <p>Applied Computer Technology</p>
                 </div>
                 <div class="footer-links">
                     <h3>Quick Links</h3>
@@ -261,7 +277,6 @@
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
