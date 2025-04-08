@@ -158,29 +158,33 @@ img {
     padding: 15px 20px;
 }
 
-/* =============== ADDED FOR HORIZONTAL NAVIGATION =============== */
+/* ============ VERTICAL NAVIGATION STYLES ============ */
 .nav-links {
     display: flex;
-    gap: 30px;
+    flex-direction: column;  /* Stack items vertically */
+    gap: 20px;
     list-style: none;
     padding-left: 0;
     margin: 0;
 }
 
 .nav-links li {
-    display: inline-block;
+    display: block; /* Ensure block-level for vertical layout */
 }
 
 .nav-links a {
+    display: block;
     color: var(--text-color);
     font-weight: 500;
-    padding: 8px 12px;
+    padding: 10px 15px;
+    border-left: 3px solid transparent;
     transition: all 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+    border-left: 3px solid var(--primary-color);
+    background-color: var(--card-bg);
 }
-/* ================================================================ */
+/* ===================================================== */
