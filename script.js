@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         greeting = 'Good Evening';
     }
-    greetingEl.textContent = `${greeting}, I'm Irungu Brian Kariuki`;
+    greetingEl.textContent = `${greeting}, I'm James Kimeu Mulei`;
 
     //time
     const clockEl = document.querySelector('.clock-container');
@@ -146,7 +146,7 @@ function filterAndRenderBlogs() {
 
 // Fetch the blog JSON
 if (blogContainer) {
-    fetch('data/blog.json')
+    fetch('blog.json')
         .then(res => res.json())
         .then(data => {
             blogPosts = data;
