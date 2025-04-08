@@ -154,10 +154,36 @@ img {
 #header .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Added to align nav items properly */
     padding: 15px 20px;
 }
 
 .logo h1 {
     font-size: 20px;
-    margin-bottom: 
+    margin-bottom:
+
+/* Make nav-links horizontal */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
