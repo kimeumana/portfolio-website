@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateClock, 1000);
     updateClock();
 
-    //theme switch
+   document.addEventListener('DOMContentLoaded', () => {
+    // Theme switch
     const themeSwitch = document.getElementById('theme-switch');
     const root = document.documentElement;
 
@@ -37,6 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const theme = root.classList.contains('dark-theme') ? 'dark' : 'light';
         localStorage.setItem('theme', theme);
     });
+
+    // Other existing code...
+});
 
     //validation
     const form = document.querySelector('form'); // Assuming you have one form
