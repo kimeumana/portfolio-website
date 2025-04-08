@@ -154,15 +154,11 @@ img {
 #header .container {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Added to align nav items properly */
+    align-items: center; /* ensure vertical centering of logo and nav */
     padding: 15px 20px;
 }
 
-.logo h1 {
-    font-size: 20px;
-    margin-bottom:
-
-/* Make nav-links horizontal */
+/* =============== ADDED FOR HORIZONTAL NAVIGATION =============== */
 .nav-links {
     display: flex;
     gap: 30px;
@@ -187,3 +183,4 @@ img {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
 }
+/* ================================================================ */
