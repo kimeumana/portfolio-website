@@ -73,6 +73,12 @@ img {
     max-width: 100%;
     height: auto;
 }
+.profile-img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it can be centered */
+    margin: 0 auto; /* Center the image horizontally */
+}
 
 .btn {
     display: inline-block;
